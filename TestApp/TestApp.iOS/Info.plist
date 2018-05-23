@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.280615189741-3rssucn15cojrlg3ctb8cl6ofo1r5c4i</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb100187504168106</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.LGI.testappspotimist</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>100187504168106</string>
+	<key>FacebookDisplayName</key>
+	<string>xamarinauthentication</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>9.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>TestApp</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-60@2x</string>
+		<string>Icon-60@3x</string>
+		<string>Icon-76</string>
+		<string>Icon-76@2x</string>
+		<string>Default</string>
+		<string>Default@2x</string>
+		<string>Default-568h@2x</string>
+		<string>Default-Portrait</string>
+		<string>Default-Portrait@2x</string>
+		<string>Icon-Small-40</string>
+		<string>Icon-Small-40@2x</string>
+		<string>Icon-Small-40@3x</string>
+		<string>Icon-Small</string>
+		<string>Icon-Small@2x</string>
+		<string>Icon-Small@3x</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key> NSCameraUsageDescription </key>
+	<string>This app needs to access a camera to scan the barcode</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>AppName wants to use your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>AppName is using your location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>fontawesome.ttf</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>Spotimist</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs to access a camera to scan the barcode</string>
+	<key>Custom Property</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.spericorn.spotimist</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+</dict>
+</plist>

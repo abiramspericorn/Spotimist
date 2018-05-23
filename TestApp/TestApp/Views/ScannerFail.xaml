@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TestApp.Views.ScannerFail"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <Grid Margin="10" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                Source="error_ic.png" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,40,0,20"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Scale="2"
+                Text="Scane Error!"
+                TextColor="{x:StaticResource Black}" />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+                TextColor="{x:StaticResource Black}" />
+            <StackLayout
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0,30,0,0"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="50">
+                <StackLayout Orientation="Vertical">
+                    <Image Source="scane_again_orange.png" />
+                    <Label FontSize="12" Text="Scan again" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScanAgain}" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="close_orange.png" />
+                    <Label FontSize="12" Text="Close" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Close}" NumberOfTapsRequired="1"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

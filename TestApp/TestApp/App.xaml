@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication
+    x:Class="TestApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms">
+    <Application.Resources>
+
+        <!--  Application resource dictionary  -->
+        <ResourceDictionary>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Orange">#F26F28</Color>
+            <Color x:Key="Black">#404144</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<naxam:BottomTabbedPage
+    x:Class="TestApp.Views.Home"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:views="clr-namespace:TestApp.Views"
+    xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.BottomTabbedPage.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <!--<NavigationPage Title="Detail" Icon="menu_home_orange.png">
+        <x:Arguments>
+            <views:Detail />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Scanner" Icon="menu_scan_gray.png">
+        <x:Arguments>
+            <views:Scanner />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Logout" Icon="menu_logout_gray.png">
+        <x:Arguments>
+            <views:Scanner />
+        </x:Arguments>
+    </NavigationPage>-->
+    <TabbedPage.Children>
+        <views:Detail  x:Name="tabhome" Title="Detail" Icon="menu_home_orange.png"/>
+        <views:Scanner  x:Name="tabscanner" Title="Scanner" Icon="menu_scan_gray.png"/>
+        <views:Logout  x:Name="tablogout" Title="Logout" Icon="menu_logout_gray.png"/>
+    </TabbedPage.Children>
+</naxam:BottomTabbedPage>

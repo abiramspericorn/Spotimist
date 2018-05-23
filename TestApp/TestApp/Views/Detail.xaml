@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TestApp.Views.Detail"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:TestApp.Controls"
+    xmlns:fonts="clr-namespace:TestApp.Models"
+    xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="Detail"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="230" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Header Section  -->
+
+            <Grid Grid.Row="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    x:Name="backgroundImage" 
+                    Source="{Binding BusinessDetail.ImageFullUrl}" 
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"   
+                    AbsoluteLayout.LayoutFlags="All" 
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" 
+                    Aspect="AspectFill"
+                />
+                <Label
+                    Grid.Row="0"
+                    Margin="0,25,-25,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding BusinessDetail.name}"
+                    TextColor="{x:StaticResource White}"
+                    VerticalTextAlignment="Center" />
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,25,10,0"
+                    HorizontalOptions="Center"
+                    Source="share_white.png"
+                    VerticalOptions="Center" />
+                <BoxView
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10,5,0,5"
+                    FontSize="17"
+                    Text="{Binding BusinessDetail.name}"
+                    TextColor="{x:StaticResource White}"
+                    VerticalOptions="End" />
+                <StackLayout
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10,5,0,5"
+                    Orientation="Horizontal">
+                    <controls:FontAwesomeLabel
+                        FontFamily="FontAwesome"
+                        FontSize="15"
+                        Text="{x:Static fonts:FontAwesome.FAStar}"
+                        TextColor="{x:StaticResource White}" />
+                    <controls:FontAwesomeLabel
+                        FontFamily="FontAwesome"
+                        FontSize="15"
+                        Text="{x:Static fonts:FontAwesome.FAStar}"
+                        TextColor="{x:StaticResource White}" />
+                    <controls:FontAwesomeLabel
+                        FontFamily="FontAwesome"
+                        FontSize="15"
+                        Text="{x:Static fonts:FontAwesome.FAStar}"
+                        TextColor="{x:StaticResource White}" />
+                    <controls:FontAwesomeLabel
+                        FontFamily="FontAwesome"
+                        FontSize="15"
+                        Text="{x:Static fonts:FontAwesome.FAStar}"
+                        TextColor="{x:StaticResource White}" />
+                    <controls:FontAwesomeLabel
+                        FontFamily="FontAwesome"
+                        FontSize="15"
+                        Text="{x:Static fonts:FontAwesome.FAStarO}"
+                        TextColor="{x:StaticResource White}" />
+
+                    <Label
+                        Margin="5,0"
+                        FontSize="12"
+                        Text=""
+                        TextColor="{x:StaticResource White}"
+                        VerticalTextAlignment="Start" />
+
+                    <controls:FontAwesomeLabel
+                        Margin="0,3,0,0"
+                        FontFamily="FontAwesome"
+                        FontSize="8"
+                        Text="{x:Static fonts:FontAwesome.FACircle}"
+                        TextColor="{x:StaticResource White}" />
+
+                    <controls:FontAwesomeLabel
+                        Margin="8,2,0,0"
+                        FontFamily="FontAwesome"
+                        FontSize="10"
+                        Text="{x:Static fonts:FontAwesome.FAUser}"
+                        TextColor="{x:StaticResource White}" />
+                    <Label
+                        Margin="5,0"
+                        FontSize="12"
+                        x:Name="fullname"
+                        LineBreakMode="TailTruncation"
+                        Text=""
+                        TextColor="{x:StaticResource White}"
+                        VerticalTextAlignment="Start" />
+
+
+                </StackLayout>
+
+            </Grid>
+
+            <!--  End  -->
+
+            <ScrollView Grid.Row="1">
+                <Grid BackgroundColor="LightGray" RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  Information Section  -->
+
+
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="10,15,0,5"
+                            HorizontalOptions="Center"
+                            Source="address_gray.png"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="8,15,5,5"
+                            FontSize="Micro"
+                            Text="{Binding BusinessDetail.addressGmap}"
+                            TextColor="SlateGray"
+                            VerticalTextAlignment="Center" />
+                        <BoxView
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="8,0,0,0"
+                            BackgroundColor="#F5F5F5"
+                            HeightRequest="1" />
+
+                        <Image
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="10,5,0,5"
+                            HorizontalOptions="Center"
+                            Source="time_gray.png"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="8,5,5,5"
+                            FontSize="Micro"
+                            Text="Open Today - Open 24 hours"
+                            TextColor="SlateGray"
+                            VerticalTextAlignment="Center" />
+                        <BoxView
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="8,0,0,0"
+                            BackgroundColor="#F5F5F5"
+                            HeightRequest="1" />
+
+                        <Image
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="10,5,0,5"
+                            HorizontalOptions="Center"
+                            Source="call_gray.png"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Margin="8,5,5,5"
+                            FontSize="Micro"
+                            Text="{Binding BusinessDetail.phone}"
+                            TextColor="SlateGray"
+                            VerticalTextAlignment="Center" />
+                        <BoxView
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Margin="8,0,0,0"
+                            BackgroundColor="#F5F5F5"
+                            HeightRequest="1" />
+
+                        <Image
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Margin="10,5,0,5"
+                            HorizontalOptions="Center"
+                            Source="url_gray.png"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            Margin="8,5,5,5"
+                            FontSize="Micro"
+                            Text="{Binding BusinessDetail.website}"
+                            TextColor="SlateGray"
+                            VerticalTextAlignment="Center" />
+                        <BoxView
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            Margin="8,0,0,0"
+                            BackgroundColor="#F5F5F5"
+                            HeightRequest="1" />
+                        <Image
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Margin="10,5,0,5"
+                            HorizontalOptions="Center"
+                            Source="email_gray.png"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="8"
+                            Grid.Column="1"
+                            Margin="8,5,5,5"
+                            FontSize="Micro"
+                            Text="{Binding BusinessDetail.business_email}"
+                            TextColor="SlateGray"
+                            VerticalTextAlignment="Center" />
+                        <BoxView
+                            Grid.Row="9"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,10,0,0"
+                            BackgroundColor="SlateGray"
+                            HeightRequest="1" />
+                    </Grid>
+                    <!--  End  -->
+                 </Grid>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+
+    <!--<map:Map MapType="Street" />-->
+
+</ContentPage>
